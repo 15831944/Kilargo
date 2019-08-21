@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="_getAuthentication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_getAuthenticationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="_getAuthenticationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_getCategoryList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_getCategoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_getCategoryListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="_getAuthenticationSoapIn">
+    <wsdl:part name="parameters" element="tns:_getAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="_getAuthenticationSoapOut">
+    <wsdl:part name="parameters" element="tns:_getAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="_getCategoryListSoapIn">
+    <wsdl:part name="parameters" element="tns:_getCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="_getCategoryListSoapOut">
+    <wsdl:part name="parameters" element="tns:_getCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="_getAuthenticationHttpGetIn">
+    <wsdl:part name="_userName" type="s:string" />
+    <wsdl:part name="_password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="_getAuthenticationHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="_getCategoryListHttpGetIn">
+    <wsdl:part name="_userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="_getCategoryListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="_getAuthenticationHttpPostIn">
+    <wsdl:part name="_userName" type="s:string" />
+    <wsdl:part name="_password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="_getAuthenticationHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="_getCategoryListHttpPostIn">
+    <wsdl:part name="_userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="_getCategoryListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="KilargoSoap">
+    <wsdl:operation name="_getAuthentication">
+      <wsdl:input message="tns:_getAuthenticationSoapIn" />
+      <wsdl:output message="tns:_getAuthenticationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="_getCategoryList">
+      <wsdl:input message="tns:_getCategoryListSoapIn" />
+      <wsdl:output message="tns:_getCategoryListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="KilargoHttpGet">
+    <wsdl:operation name="_getAuthentication">
+      <wsdl:input message="tns:_getAuthenticationHttpGetIn" />
+      <wsdl:output message="tns:_getAuthenticationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="_getCategoryList">
+      <wsdl:input message="tns:_getCategoryListHttpGetIn" />
+      <wsdl:output message="tns:_getCategoryListHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="KilargoHttpPost">
+    <wsdl:operation name="_getAuthentication">
+      <wsdl:input message="tns:_getAuthenticationHttpPostIn" />
+      <wsdl:output message="tns:_getAuthenticationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="_getCategoryList">
+      <wsdl:input message="tns:_getCategoryListHttpPostIn" />
+      <wsdl:output message="tns:_getCategoryListHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="KilargoSoap" type="tns:KilargoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="_getAuthentication">
+      <soap:operation soapAction="http://tempuri.org/_getAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_getCategoryList">
+      <soap:operation soapAction="http://tempuri.org/_getCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="KilargoSoap12" type="tns:KilargoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="_getAuthentication">
+      <soap12:operation soapAction="http://tempuri.org/_getAuthentication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_getCategoryList">
+      <soap12:operation soapAction="http://tempuri.org/_getCategoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="KilargoHttpGet" type="tns:KilargoHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="_getAuthentication">
+      <http:operation location="/_getAuthentication" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_getCategoryList">
+      <http:operation location="/_getCategoryList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="KilargoHttpPost" type="tns:KilargoHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="_getAuthentication">
+      <http:operation location="/_getAuthentication" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="_getCategoryList">
+      <http:operation location="/_getCategoryList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Kilargo">
+    <wsdl:port name="KilargoSoap" binding="tns:KilargoSoap">
+      <soap:address location="http://54.213.22.112/kilargo/Kilargo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="KilargoSoap12" binding="tns:KilargoSoap12">
+      <soap12:address location="http://54.213.22.112/kilargo/Kilargo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="KilargoHttpGet" binding="tns:KilargoHttpGet">
+      <http:address location="http://54.213.22.112/kilargo/Kilargo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="KilargoHttpPost" binding="tns:KilargoHttpPost">
+      <http:address location="http://54.213.22.112/kilargo/Kilargo.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

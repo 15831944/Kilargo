@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+ 
+  <AddIn Type="Application">
+    <Name>Application Kilargo 2019</Name>
+    <Assembly>C:\ProgramData\Autodesk\Revit\Addins\2019\Kilargo\Kilargo.dll</Assembly>
+    <FullClassName>Kilargo.App</FullClassName>
+    <AddInId>9849F739-9515-482B-8F89-9D027EDEF2CC</AddInId>
+    <ClientId>A7156DDC-1711-437C-B49E-A7BA39E4FA20</ClientId>
+    <VendorId>TBC_</VendorId>
+    <VendorDescription></VendorDescription>
+  </AddIn>
+</RevitAddIns>

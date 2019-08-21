@@ -1,0 +1,20 @@
+D:\Projects\1. Chennai\4. Migration\kilargo 2019 new\kilargo\obj\Debug\kilargo.Products.resources
+D:\Projects\1. Chennai\4. Migration\kilargo 2019 new\kilargo\obj\Debug\kilargo.login.resources
+D:\Projects\1. Chennai\4. Migration\kilargo 2019 new\kilargo\obj\Debug\kilargo.ProductDetails.resources
+D:\Projects\1. Chennai\4. Migration\kilargo 2019 new\kilargo\obj\Debug\kilargo.Properties.Resources.resources
+D:\Projects\1. Chennai\4. Migration\kilargo 2019 new\kilargo\obj\Debug\kilargo.csproj.GenerateResource.cache
+D:\Projects\1. Chennai\4. Migration\kilargo 2019 new\kilargo\obj\Debug\kilargo.csproj.CoreCompileInputs.cache
+D:\Projects\1. Chennai\4. Migration\kilargo 2019 new\kilargo\obj\Debug\kilargo.dll
+D:\Projects\1. Chennai\4. Migration\kilargo 2019 new\kilargo\obj\Debug\kilargo.pdb
+D:\Projects\1. Chennai\4. Migration\kilargo 2019 new\kilargo\obj\Debug\kilargo.csprojAssemblyReference.cache
+C:\Users\imthiyas\Desktop\Revit 2019 Setup Help\kilargo 2019 new\kilargo\obj\Debug\kilargo.Products.resources
+C:\Users\imthiyas\Desktop\Revit 2019 Setup Help\kilargo 2019 new\kilargo\obj\Debug\kilargo.login.resources
+C:\Users\imthiyas\Desktop\Revit 2019 Setup Help\kilargo 2019 new\kilargo\obj\Debug\kilargo.ProductDetails.resources
+C:\Users\imthiyas\Desktop\Revit 2019 Setup Help\kilargo 2019 new\kilargo\obj\Debug\kilargo.Properties.Resources.resources
+C:\Users\imthiyas\Desktop\Revit 2019 Setup Help\kilargo 2019 new\kilargo\obj\Debug\kilargo.csproj.GenerateResource.Cache
+C:\ProgramData\Autodesk\Revit\Addins\2019\Kilargo\Kilargo.addin
+C:\ProgramData\Autodesk\Revit\Addins\2019\Kilargo\kilargo.dll.config
+C:\ProgramData\Autodesk\Revit\Addins\2019\Kilargo\kilargo.dll
+C:\ProgramData\Autodesk\Revit\Addins\2019\Kilargo\kilargo.pdb
+C:\Users\imthiyas\Desktop\Revit 2019 Setup Help\kilargo 2019 new\kilargo\obj\Debug\kilargo.dll
+C:\Users\imthiyas\Desktop\Revit 2019 Setup Help\kilargo 2019 new\kilargo\obj\Debug\kilargo.pdb
